@@ -1,6 +1,7 @@
 import socket
 import time
 import re
+import numpy as np
 
 HOST = 'raspberrypi.local'
 PORT = 50002
