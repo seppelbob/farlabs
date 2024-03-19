@@ -1,0 +1,1 @@
+ffplay tcp://raspberrypi.local:8554 -vf "setpts=N/30" -fflags nobuffer -flags low_delay -framedrop
