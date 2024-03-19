@@ -1,0 +1,16 @@
+Command for streaming video using TCP:
+libcamera-vid -t 0 --inline --listen -o tcp://0.0.0.0:8554
+
+Can listed to network stream using VLC at tcp/h264://{Pi IP address}:8554
+
+Or for low latency stream:
+ffplay tcp://{Pi IP address}:8554 -vf "setpts=N/30" -fflags nobuffer -flags low_delay -framedrop
+
+
+
+
+
+
+
+
+
