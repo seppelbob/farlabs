@@ -1,0 +1,35 @@
+Setting up Raspberry Pi Zero 2 W
+
+1. Use Raspberry Pi Imager to install Lite version of raspberian on an SD card
+	During setup, remember to enable SSH and set wifi details
+
+
+2. SSH into Raspberry Pi and run the following commands
+
+	sudo apt update
+	sudo apt upgrade				
+	sudo apt install libcamera-apps		# Install libcamera for video streaming
+	sudo apt install python3-pip		# Install pip
+
+	pip install --updrade setuptools
+
+	cd ~
+	sudo pip install --upgrade adafruit-python-shell
+	wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
+	sudo python raspi-blinka.py
+
+	<reboot when asked>
+
+	sudo pip3 install adafruit-circuitpython-bh1750 	# Install module for light sensor
+	pip install pigpio-dht					# Install module for temp/humidity sensor
+	wget https://github.com/joan2937/pigpio/archive/master.zip
+	unzip master.zip
+	cd pigpio-master
+	make
+	sudo make install
+
+	sudo pigpiod    # start daemon
+
+3. Clone git repository onto device
+
+	git clone ...../farlabs
