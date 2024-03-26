@@ -32,4 +32,4 @@ Setting up Raspberry Pi Zero 2 W
 
 3. Clone git repository onto device
 
-	git clone ...../farlabs
+	git clone https://github.com/seppelbob/farlabs.git
